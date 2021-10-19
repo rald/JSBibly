@@ -1,6 +1,6 @@
 {
-  "name": "Hello World",
-  "short_name": "Hello",
+  "name": "JSBibly",
+  "short_name": "Bibly",
   "icons": [{
       "src": "favicon/android-chrome-192x192.png",
       "sizes": "192x192",
