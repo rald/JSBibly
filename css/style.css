@@ -1,0 +1,136 @@
+* {
+  font-family: sans-serif;
+  font-size: 24px;
+	box-sizing: border-box;
+}
+
+body {
+	overscroll-behavior: contain;
+}
+
+html, body {
+	margin: 0;
+}
+
+
+/* Make content area fill the entire browser window */
+html,
+.fullscreen {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+
+/**************** Begin Modal ****************/
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+#modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+	text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/**************** End Modal ****************/
+
+
+
+
+
+
+.title {
+  font-size: 3rem;
+}
+
+.main-flex-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.main-flex-items:nth-child(1)  {
+	height: 100%;
+	padding: 10px;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	overflow: auto;
+	scroll-behavior: smooth;
+}
+
+.main-flex-items:nth-child(2)  {
+}
+
+.form-flex-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	width: 100%;
+}
+
+.form-flex-items:nth-child(1)  {
+	flex-grow: 1;
+	padding: 10px;
+}
+
+.form-flex-items:nth-child(2)  {
+	padding: 10px;
+}
+
+.form-container {
+	background: #515151;
+	padding: 10px;
+}
+
+.command-text {
+	border: 1px solid black;
+	border-radius: 40px;
+	width: 100%;
+	padding: 20px;
+}
+
+.send-button {
+	background-color: #00b4ff;
+	border: 1px solid black;
+	border-radius: 40px;
+	padding: 20px;
+}
+
+
+
+
+
