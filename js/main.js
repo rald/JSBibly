@@ -187,7 +187,12 @@ function btnSend_Click() {
 			tmp1=tmp0[0].split(" ").filter(i=>i);
 
 			var i=0;
-			for(i=0;i<tmp1.length;i++) {
+			tmp=parseInt(tmp1[0]);
+			if(!isNaN(tmp)) {
+					bookNameToFind+=tmp1[i];
+					i++;
+			}
+			for(;i<tmp1.length;i++) {
 				if(isNaN(parseInt(tmp1[i]))) {
 					if(i!=0) bookNameToFind+=" ";
 					bookNameToFind+=tmp1[i];
