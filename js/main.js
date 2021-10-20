@@ -159,31 +159,34 @@ function btnSend_Click() {
 			output.innerHTML="";
 		} else if(cmd.startsWith(".search")) {
 			var tmp3=cmd.split(" ",2);
-			result="";
-			var count=0;
-			var found=false;
-			for(var i=0;i<BibleCSV.length;i++) {
-				var line=BibleCSV[i];
-				var tmp1=line.split("|");
-				var tmp2=tmp1[1].split(":");
-				var bookName=tmp1[0];
-				var chapNum=parseInt(tmp2[0]);
-				var versNum=parseInt(tmp2[1]);
-				var versTxt=tmp1[2];
+			if(tmp3.length===2) {
+				var tmp5=tmp3[1].toLowerCase();
+				result="";
+				var count=0;
+				var found=false;
+				for(var i=0;i<BibleCSV.length;i++) {
+					var line=BibleCSV[i];
+					var tmp1=line.split("|");
+					var tmp2=tmp1[1].split(":");
+					var bookName=tmp1[0];
+					var chapNum=parseInt(tmp2[0]);
+					var versNum=parseInt(tmp2[1]);
+					var versTxt=tmp1[2];
 
-				var tmp4=line.replaceAll("|"," ");
-				if(tmp4.search(tmp3[1])!=-1) {
-					count++;
-					result+="<b>"+bookName+" "+chapNum+":"+versNum+"</b> "+versTxt+"\n\n";
-					found=true;
+					var tmp4=line.replaceAll("|"," ").toLowerCase();
+					if(tmp4.search(tmp5)!=-1) {
+						count++;
+						result+="<b>"+bookName+" "+chapNum+":"+versNum+"</b> "+versTxt+"\n\n";
+						found=true;
+					}
 				}
+				if(found) {
+					result+="<b>Found "+count+" occurrences</b><br>";
+				} else {
+					result+="<b>Not Found</b><br>";
+				}
+				output.innerHTML+=result;
 			}
-			if(found) {
-				result+="<b>Found "+count+" occurrences</b><br>";
-			} else {
-				result+="<b>Not Found</b><br>";
-			}
-			output.innerHTML+=result;
 		}
 
 	} else {
