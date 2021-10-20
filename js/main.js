@@ -179,7 +179,7 @@ function btnSend_Click() {
 				}
 			}
 			if(found) {
-				result+="<b>Found "+count+" ocurrences</b><br>";
+				result+="<b>Found "+count+" occurrences</b><br>";
 			} else {
 				result+="<b>Not Found</b><br>";
 			}
